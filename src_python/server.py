@@ -31,12 +31,12 @@ def hello():
 	result = loaded_model.predict(test_data)
 	print(result)
 	responseObj["flower-type"] = result[0]
-	return str(responseObj)
+	return responseObj
 
 @app.route('/app/<path:path>')
 def send_js(path):
-    return send_from_directory('public', path)
+    return send_from_directory('build', path)
 
 if __name__ == "__main__":
 	app.config['TEMPLATES_AUTO_RELOAD'] = True
-	app.run(host='0.0.0.0', debug=True, port=8080)
+	app.run(host='0.0.0.0', debug=True, port=8081)
