@@ -22,4 +22,4 @@ docker run --rm -p 8080:8080 iris-model
 To be filled up 
 
 # Building the frontend + Backend code
-To be filled up 
+To be filled up for testing
